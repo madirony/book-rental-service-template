@@ -1,1 +1,1 @@
-# book-rental-service-template
+# book-rental-service

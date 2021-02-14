@@ -1,0 +1,36 @@
+{{>layout/header}}
+
+<h1>도서 기부</h1>
+
+<div class="col-md-12">
+    <div class="col-md-10">
+        <form>
+            <div class="form-group">
+                <label for="title">책 제목</label>
+                <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="author">작성자</label>
+                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요.">
+                {{#user}}{{username}}{{/user}}
+            </div>
+            <div class="form-group">
+                <label for="classification">분류</label>
+                <select name="classificaition" id="donation_class">
+                    <option value="">분류선택</option>
+                    <option value="전공">전공</option>
+                    <option value="교양">교양</option>
+                    <option value="기타">기타</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="content">인적 사항</label>
+                <textarea class="form-control" id="content" placeholder="학번과 전화번호를 입력하세요."></textarea>
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-primary" id="donationsubmit">등록</button>
+    </div>
+</div>
+
+{{>layout/footer}}

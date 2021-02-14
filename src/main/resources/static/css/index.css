@@ -1,0 +1,28 @@
+/*!
+ * Start Bootstrap - Shop Item (https://startbootstrap.com/template/shop-item)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-item/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+}
+
+article {padding: 52px 3% 0;}
+article .card mt-4 {padding: 20px; min-height: 500px;}
+
+
+/* 이미지 */
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+
+
+/* 버튼 */
+button {
+  width: 150px;
+  height: auto;
+}

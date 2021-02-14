@@ -1,0 +1,30 @@
+{{>layout/header}}
+<div class="container" style="text-align: center; padding-top: 50px; padding-bottom: 50px;">
+    <h1>회원가입</h1>
+    <div class="row">
+
+        <div class="col-md-12">
+
+            {{#user}}
+                {{#user.Student_ID}}
+                <script type="text/javascript">
+                    alert("이미 가입된 회원");
+                    location.href="/";
+                </script>
+                {{/user.Student_ID}}
+                {{^user.Student_ID}}
+                <script type="text/javascript">
+                    location.href="/signup/add"
+                </script>
+                {{/user.Student_ID}}
+            {{/user}}
+            {{^user}}
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google ID로 가입하기</a>
+                <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver ID로 가입하기</a>
+
+            {{/user}}
+
+        </div>
+    </div>
+</div>
+{{>layout/footer}}

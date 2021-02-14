@@ -1,0 +1,59 @@
+{{>layout/header}}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-5">
+            <h1 class="my-4">마이페이지</h1>
+            <div class="list-group">
+                <a href="#/mypage" class="list-group-item">대여중 도서 목록</a>
+                <a href="#/mypage/donationinfo" class="list-group-item active">기부 정보</a>
+                <a href="#" class="list-group-item">사물함</a>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            {{#user}}
+                <p>{{name}}님의 기부 점수는 {{donation_count}} 점 입니다.</p>
+            {{/user}}
+            <div class="card mt-4">
+                <table border="1">
+                    <th>제목</th>
+                    <th>분류</th>
+                    <th>반납하기</th>
+                    <tr>
+                        <td>컴퓨터아키텍쳐</td>
+                        <td>전공</td>
+                        <td>
+                            <input type="button" style="color: #ff0000" value="반납">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>컴퓨터아키텍쳐</td>
+                        <td>전공</td>
+                        <td>
+                            <input type="button" style="color: #ff0000" value="반납">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>컴퓨터아키텍쳐</td>
+                        <td>전공</td>
+                        <td>
+                            <input type="button" style="color: #ff0000" value="반납">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>컴퓨터아키텍쳐</td>
+                        <td>전공</td>
+                        <td>
+                            <input type="button" style="color: #ff0000" value="반납">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+{{>layout/footer}}

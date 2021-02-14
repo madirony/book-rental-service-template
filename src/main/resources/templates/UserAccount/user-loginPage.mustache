@@ -1,0 +1,18 @@
+{{>layout/header}}
+<div class="container" style="text-align: center; padding-top: 50px; padding-bottom: 50px;">
+    <h1>로그인</h1>
+    <div class="row">
+        <div class="col-md-12">
+                {{#user}}
+                    Logged in as: <span id="user">{{user}}</span>
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                {{/user}}
+                {{^user}}
+                    <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                    <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+                {{/user}}
+        </div>
+    </div>
+</div>
+
+{{>layout/footer}}

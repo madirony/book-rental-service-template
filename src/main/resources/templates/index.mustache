@@ -1,0 +1,298 @@
+{{>layout/header}}
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <h1 class="my-4">도서목록</h1>
+        <div class="col-lg-10">
+            <div class="card mt-3" style="text-align: center">
+                <div class="card-body">
+                    <form method="GET" action="index.mustache">
+                        <p>도서 조회 옵션</p>
+                        <label><input type="radio" name="inquiry" value="viewAll" checked> 모두 보기</label>
+                        <label><input type="radio" name="inquiry" value="major"> 전공</label>
+                        <label><input type="radio" name="inquiry" value="elective"> 교양</label>
+                        <p><input type="submit" style="background-color:lawngreen;color: red;" value="옵션 조회"><input type="reset" value="초기화"></p>
+                    </form>
+                </div>
+            </div>
+
+            <form method="GET" action="/search">
+                <div class="my-4">
+                    <input type="text" class="form-control" id="search" placeholder="도서 명을 입력하세요">
+                    <button type="button" class="btn-primary">도서 검색</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+        <!-- /.col-lg-3 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                    <div class="card mt-4" style="text-align: center">
+                        <a target="_self" href="/img/computer-architecture.jpg">
+                            <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                        <div class="card-body">
+                            <h2 class="card-title">컴퓨터 아키텍처</h2>
+                            {{#books.reservation}}
+                                {{>layout/RentalModal}}
+                            {{/books.reservation}}
+                            {{^books.reservation}}
+                                <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                        onclick="soldOutAlert()">
+                                    SOLD OUT!
+                                </button>
+                            {{/books.reservation}}
+
+                        </div>
+                    </div>
+
+            </div>
+                    <!--반복-->
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                    <div class="card mt-4" style="text-align: center">
+                        <a target="_self" href="/img/computer-architecture.jpg">
+                            <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                        <div class="card-body">
+                            <h2 class="card-title">컴퓨터 아키텍처</h2>
+                            {{#books.reservation}}
+                                {{>layout/RentalModal}}
+                            {{/books.reservation}}
+                            {{^books.reservation}}
+                                <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/books/detail'">
+                                    대여
+                                </button>
+                            {{/books.reservation}}
+
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                    <div class="card mt-4" style="text-align: center">
+                        <a target="_self" href="/img/computer-architecture.jpg">
+                            <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                        <div class="card-body">
+                            <h2 class="card-title">컴퓨터 아키텍처</h2>
+                            {{#books.reservation}}
+                                {{>layout/RentalModal}}
+                            {{/books.reservation}}
+                            {{^books.reservation}}
+                                <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                        onclick="soldOutAlert()">
+                                    SOLD OUT!
+                                </button>
+                            {{/books.reservation}}
+
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                <div class="card mt-4" style="text-align: center">
+                    <a target="_self" href="/img/computer-architecture.jpg">
+                        <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                    <div class="card-body">
+                        <h2 class="card-title">컴퓨터 아키텍처</h2>
+                        {{#books.reservation}}
+                            {{>layout/RentalModal}}
+                        {{/books.reservation}}
+                        {{^books.reservation}}
+                            <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                    onclick="soldOutAlert()">
+                                SOLD OUT!
+                            </button>
+                        {{/books.reservation}}
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                <div class="card mt-4" style="text-align: center">
+                    <a target="_self" href="/img/computer-architecture.jpg">
+                        <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                    <div class="card-body">
+                        <h2 class="card-title">컴퓨터 아키텍처</h2>
+                        {{#books.reservation}}
+                            {{>layout/RentalModal}}
+                        {{/books.reservation}}
+                        {{^books.reservation}}
+                            <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                    onclick="soldOutAlert()">
+                                SOLD OUT!
+                            </button>
+                        {{/books.reservation}}
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                <div class="card mt-4" style="text-align: center">
+                    <a target="_self" href="/img/computer-architecture.jpg">
+                        <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                    <div class="card-body">
+                        <h2 class="card-title">컴퓨터 아키텍처</h2>
+                        {{#books.reservation}}
+                            {{>layout/RentalModal}}
+                        {{/books.reservation}}
+                        {{^books.reservation}}
+                            <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                    onclick="soldOutAlert()">
+                                SOLD OUT!
+                            </button>
+                        {{/books.reservation}}
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                <div class="card mt-4" style="text-align: center">
+                    <a target="_self" href="/img/computer-architecture.jpg">
+                        <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                    <div class="card-body">
+                        <h2 class="card-title">컴퓨터 아키텍처</h2>
+                        {{#books.reservation}}
+                            {{>layout/RentalModal}}
+                        {{/books.reservation}}
+                        {{^books.reservation}}
+                            <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                    onclick="soldOutAlert()">
+                                SOLD OUT!
+                            </button>
+                        {{/books.reservation}}
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+                {{#books}}
+                    <p>{{id}}</p>
+                    <p>{{title}}</p>
+                    <p>{{author}}</p>
+                    <p>{{Date}}</p>
+                {{/books}}
+
+                <div class="card mt-4" style="text-align: center">
+                    <a target="_self" href="/img/computer-architecture.jpg">
+                        <img class="card-img-top img-fluid" style="width: 150px; height: auto;" src="/img/computer-architecture.jpg" alt="Computer-Architecture"></a>
+                    <div class="card-body">
+                        <h2 class="card-title">컴퓨터 아키텍처</h2>
+                        {{#books.reservation}}
+                            {{>layout/RentalModal}}
+                        {{/books.reservation}}
+                        {{^books.reservation}}
+                            <button type="button" class="btn btn-primary btn-lg" style="background-color: #5a6268;color: white"
+                                    onclick="soldOutAlert()">
+                                SOLD OUT!
+                            </button>
+                        {{/books.reservation}}
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- /.col-lg-9 -->
+    </div>
+
+    <div class="col-lg-12" style="padding-top: 15px;">
+    <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                {{#check}}
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                {{/check}}
+                {{^check}}
+                    <a class="page-link disabled" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                    </a>
+                {{/check}}
+            </li>
+        </ul>
+    </nav>
+    </div>
+
+</div>
+<!-- /.container -->
+{{>layout/footer}}

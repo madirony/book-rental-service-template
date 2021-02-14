@@ -1,0 +1,42 @@
+{{>layout/admin-header}}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-5">
+            <h1 class="my-4">도서관리</h1>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">도서관리</a>
+                <a href="#" class="list-group-item">신규도서추가</a>
+                <a href="#" class="list-group-item">사물함</a>
+            </div>
+            <div class="my-4">
+                <input type="text" class="form-control" id="search" placeholder="도서 명을 입력하세요">
+                <button type="button" class="btn-primary">도서 검색</button>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-5">
+
+            <div class="card mt-4">
+                <img class="card-img-top img-fluid" style="width: 500px; height: auto;" src="/img/computer-architecture.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">컴퓨터 아키텍처</h3>
+                    <h4>대여료 : 5000</h4>
+                    <p class="card-text">3학년 1학기 전공 서적</p>
+                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                    4.0 stars
+                    {{>layout/RentalModal}}
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-9 -->
+    </div>
+
+</div>
+
+
+
+
+{{>layout/footer}}
